@@ -6,7 +6,7 @@
 	Este programa exemplifica o uso de 4 syscalls de gerenciamento de arquivos:
 open, read, write e close.
 	Para isso, propoe-se uma simples tarefa de criptografia de um arquivo texto
-de entrada. Este eh aberto para leitura, enquanto um outro arquivo eh aberto para
+de entrada. Este eh aberto para leitura, enquanto um outro arquivo eh criado para
 salvar a criptografia. A entrada eh lida, manipulada, e entao salva na saida.
 Por fim, os arquivos sao fechados.
 

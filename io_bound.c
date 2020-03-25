@@ -1,6 +1,16 @@
 // João Marcos Della Torre Divino - NUSP 10377708
 // Paulo Inay Cruz - NUSP 10388691
 
+/*
+
+	Este programa exemplifica o comportamento de processos I/O bound.
+	Para isso, propoe-se uma simples tarefa de criptografia de 4 arquivos de texto. 
+Individualmente, eles sao abertos para leitura, enquanto um outros arquivos sao criados
+para salvar a criptografia de cada um. A entrada eh lida, manipulada, e entao salva na saida.
+Por fim, os arquivos sao fechados.
+
+*/
+
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
