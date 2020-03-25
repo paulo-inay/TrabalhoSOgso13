@@ -1,6 +1,16 @@
 // João Marcos Della Torre Divino - NUSP 10377708
 // Paulo Inay Cruz - NUSP 10388691
 
+/*
+
+	Este programa exemplifica o uso de 4 syscalls de gerenciamento de arquivos:
+open, read, write e close.
+	Para isso, propoe-se uma simples tarefa de criptografia de um arquivo texto
+de entrada. Este eh aberto para leitura, enquanto um outro arquivo eh aberto para
+salvar a criptografia. A entrada eh lida, manipulada, e entao salva na saida.
+Por fim, os arquivos sao fechados.
+
+*/
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
