@@ -35,21 +35,22 @@ int main(){
 			B = (C - B);
 			C = C * (B-A);
 			D = C - (A + B);
-			printf("Processo filho do filho: A --> %d | B --> %d | C --> %d | D --> %d", A, B, C, D);
-			_exit(0);
+			printf("\nProcesso filho do filho: A --> %d | B --> %d | C --> %d | D --> %d", A, B, C, D);
+			fflush(stdout);
+			_exit(0);// Syscall exit --> encerra o processo
 			
 		}else{ //Codigo do processo filho
 			
-			/* Aqui nao foi inserido o waitpid a fim de verificar a condicao de processo orfao,
-			isto eh, quando o processo pai (neste caso, child) termina antes que o filho (neste
-			caso, grandchild) */
+			/* Aqui nao foi inserido o waitpid a fim de verificar a condicao de processo orfao
+			e processo zumbi, isto eh, quando o processo pai (neste caso, child) termina 
+			antes que o filho (neste caso, grandchild) */
 			
 			
 			/* Impressao para constatar a independencia entre as variaveis 
 			do processo e do filho, que seriam "as mesmas" */
-			printf("Processo filho: A --> %d | B --> %d | C --> %d | D --> %d", A, B, C, D); 
-																 
-			_exit(0);
+			printf("\nProcesso filho: A --> %d | B --> %d | C --> %d | D --> %d", A, B, C, D); 
+			fflush(stdout);
+			_exit(0); // Syscall exit --> encerra o processo
 			
 		}
 		
@@ -61,11 +62,11 @@ int main(){
 										para poder executar*/
 						
 		// Verificacao do status de execucao do processo filho
-		printf("Status do filho: %d\n", status_c);
+		printf("\nStatus do filho: %d\n", status_c);
 		
 		/* Impressao para constatar a independencia entre as variaveis 
 		do processo e do filho, que seriam "as mesmas" */
-		printf("Processo pai: A --> %d | B --> %d | C --> %d", A, B, C);
+		printf("\nProcesso pai: A --> %d | B --> %d | C --> %d", A, B, C);
 		
 	}
 	
