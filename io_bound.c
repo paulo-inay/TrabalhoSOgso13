@@ -32,7 +32,7 @@ int main(){
 		while(n > 0){
 			
 			for(i = 0; i < strlen(buffer); i++){
-				char[i] += (i % 10);
+				buffer[i] += (i % 10);
 			}
 			
 			n = write(fp, buffer, strlen(buffer));
