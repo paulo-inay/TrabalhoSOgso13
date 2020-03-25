@@ -1,0 +1,13 @@
+Relatório >>> Matriz esparsa <<<
+     Este trabalho consistiu em implementar, utilizando 
+linguagem C, um programa que implemente operações
+básicas em uma matriz esparsa.
+     O programa apresenta uma interface interativa, com
+um Menu incial, com as opções de inicializar a matriz 
+ou sair do programa, e um menu secundário, com as
+ações a serem realizadas sobre a matriz, as quais 
+podem ser realizadas mais de uma vez.
+     As entradas de todos os menus são números
+inteiros, o que ocasiona bugs caso o usuário insira 
+qualquer outro tipo de variável, como, por exemplo,
+um char.

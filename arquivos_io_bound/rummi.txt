@@ -1,0 +1,15 @@
+Relatório >>> Rummikub <<<
+     Neste trabalho, foi implementado, utilizando linguagem C, um programa que
+permite jogar Rummikub.
+     O programa fornece uma interface interativa e bem detalhada, com um menu inicial,
+opção de seleção do modo de jogo (Aleatório ou Controlado) e da quantidade de
+jogadores, um menu secundário com as ações do jogo, visão do tabuleiro e das cartas
+de cada jogador, indicação de vitória e possibilidade de jogar novamente.
+     O código é praticamente todo estruturado em cima de funções, as quais controlam
+todo o andamento do jogo. Os menus têm como entrada, em sua maioria, caracteres.
+O baralho (com 106 cartas) é composto por números hexadecimais (de 1 a D), que
+indicam o valor da carta, e por caracteres especiais ('!', '@', '#' e '$'), que indicam
+os naipes, além de dois coringas ('**' e '**').
+     Limitações são encontradas no que diz respeito à entradas diferentes das exigidas
+nos poucos menus que funcionam com inteiros. Ainda, aleatoriamente, é impresso
+'C:' para algum jogador quando o anterior compra uma carta.

@@ -1,0 +1,40 @@
+Relatório >>> CalculadoraMARS.asm <<<
+   Este programa implementa em Assembly uma calculadora 
+para uma arquitetura MIPS, usando o MARS. Para executá-lo, 
+basta abrir o código dentro do simulador, selecionar a opção
+"Assemble" e depois "Run".
+   A calculadora trabalha com inteiros de 32 bits com sinal 
+(números negativos em complemento de 2), float de 32 bits 
+e double de 64 bits, sendo possível realizar operações de soma, 
+subtração, multiplicação, divisão e de inversão de sinal.
+   Inicialmente, o usuário será indagado quanto ao tipo de dado 
+que deseja utilizar, sendo "I" ou"i" correspondente a inteiro, 
+"F" ou "f" a float e "D" ou "d" a double. Em seguida, será 
+requerido o tipo de operação: "+", "-", "*", "/" ou "!". Não há
+tratamento de erro nesses dois casos, isto é, qualquer entada 
+diferente da esperada gerará erros no progama.
+   O programa então solicita ao usuário os dois valores que serão 
+utilizados na operação (ou um valor, no caso da inversão de 
+sinal). Para cada valor inserido, é exibido seu correspondente 
+em notação hexadecimal. Note que, caso o usuário insira um 
+valor em ponto flutuante, mas o tipo de dado escolhido tenha 
+sido inteiro, o resultado será errôneo.
+   Por fim, o resultado da operação é exibido, novamente com 
+seu correspondente em hexadecimal, e o usuário é questionado 
+se deseja realizar outra operação, podendo escolher entre "Y" 
+ou "y" para sim, e "N" ou "n" para não. Aqui ocorre o tratamento 
+do erro em caso de entrada diferente. Em caso de resposta 
+positiva, o programa retorna para o começo. Caso contrário, a 
+execução se encerra.
+   Vale mencionar que em caso de overflow (estouro do limite de 
+bits do número), o programa informa o usuário e já parte para 
+a pergunta de nova operação.
+>>> Considerações a respeito do código <<<
+   Dois são os pontos importantes a se destacar com relação ao 
+código. Primeiramente, para a impressão dos valores em hexa- 
+decimal, foi usada a syscall 34, exclusiva do MARS. Outra abor-
+dagem para essa funcionalidade seria transformar manualmente 
+os números para hexadecimal.
+   E segundo, para a impressão da mensagem de overflow, foi 
+necessário acessar a localização do "exception handler" no 
+"kernel text segment".
