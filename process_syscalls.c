@@ -1,6 +1,16 @@
 // João Marcos Della Torre Divino - NUSP 10377708
 // Paulo Inay Cruz - NUSP 10388691
 
+/*
+
+	Este programa exemplifica o uso de 3 syscalls de gerenciamento de processos:
+fork, waitpid e exit.
+	Ele cria um processo filho e depois um processo filho desse filho. Entao, 
+realiza algumas operacoes aritmeticas simples sobre variaveis "comuns" aos processos 
+(pai e filhos), a fim de explicitar a independencia entre elas.
+
+*/
+
 #include <unistd.h>
 #include <sys/wait.h>
 #include <stdio.h>
@@ -25,7 +35,7 @@ int main(){
 		B = 17;
 		C = 25;
 		
-		grandchild = fork(); // Syscall fork --> cria um novo processo (processo filho)
+		grandchild = fork();
 		
 		if(grandchild == 0){ // Processo filho do filho
 			
@@ -37,7 +47,7 @@ int main(){
 			D = C - (A + B);
 			printf("\nProcesso filho do filho: A --> %d | B --> %d | C --> %d | D --> %d", A, B, C, D);
 			fflush(stdout);
-			_exit(0);// Syscall exit --> encerra o processo
+			_exit(0); // Syscall exit --> encerra o processo
 			
 		}else{ //Codigo do processo filho
 			
@@ -50,7 +60,7 @@ int main(){
 			do processo e do filho, que seriam "as mesmas" */
 			printf("\nProcesso filho: A --> %d | B --> %d | C --> %d | D --> %d", A, B, C, D); 
 			fflush(stdout);
-			_exit(0); // Syscall exit --> encerra o processo
+			_exit(0);
 			
 		}
 		
