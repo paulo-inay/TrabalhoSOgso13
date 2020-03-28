@@ -47,7 +47,7 @@ int main(){
 	n = write(fp, buffer, strlen(buffer));
 	
 	
-	/* Syscall close --> fecha um arquivo, retornando 0 se executada com sucesso, ou 1 em caso de erro */
+	/* Syscall close --> fecha um arquivo, retornando 0 se executada com sucesso, ou -1 em caso de erro */
 	s = close(fd);
 	s = close(fp);
 	
