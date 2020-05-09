@@ -1,4 +1,4 @@
-// João Marcos Della Torre Divino - NUSP 10377708
+// JoÃ£o Marcos Della Torre Divino - NUSP 10377708
 // Paulo Inay Cruz - NUSP 10388691
 
 /*
@@ -25,7 +25,7 @@ int main(){
 	
 	/* Syscall open --> abre um arquivo para leitura, escrita ou ambos, retornando o descritor do arquivo */
 	fd = open("entrada.txt", O_RDONLY); // Arquivo "entrada.txt" aberto para leitura apenas	
-	fp = open("cripto.txt", O_CREAT|O_WRONLY); // Arquivo "cripto.txt" criado (caso não exista) ou aberto para escrita
+	fp = open("cripto.txt", O_CREAT|O_WRONLY); // Arquivo "cripto.txt" criado (caso nÃ£o exista) ou aberto para escrita
 	
 	
 	/* Syscall read --> le nbytes de um arquivo para um buffer, retornando o numero de bytes lido */
