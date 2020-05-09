@@ -1,4 +1,4 @@
-// Jo„o Marcos Della Torre Divino - NUSP 10377708
+// Jo√£o Marcos Della Torre Divino - NUSP 10377708
 // Paulo Inay Cruz - NUSP 10388691
 
 /*
@@ -23,7 +23,7 @@ int main(){
 	
 	child = fork(); // Syscall fork --> cria um novo processo (processo filho)
 	
-	if(child == 0){ /* Processo filho --> possui uma cÛpia de todas as variaveis do
+	if(child == 0){ /* Processo filho --> possui uma c√≥pia de todas as variaveis do
 					processo pai; assim sendo, a partir daqui, qualquer alteracao de
 					valor nao influencia as variaveis do pai */
 		
