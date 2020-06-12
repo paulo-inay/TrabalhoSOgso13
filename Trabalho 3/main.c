@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include "estDados.h"
 #include "memGen.h"
 
 int main(){
