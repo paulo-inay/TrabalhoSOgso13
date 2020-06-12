@@ -113,6 +113,10 @@ int main(){
 
 	while(flag){
 
+        printf("\nAperte enter para prosseguir . . .");
+        fflush(stdin);
+        getc(stdin);
+
         sscanf(leitura, "%d %c", &entrada.proc, &entrada.operation);
 
 		switch(entrada.operation){ //Para os casos C, eh alocado espaco para o novo processo.
@@ -220,8 +224,9 @@ int main(){
                 continue; //Loop recomecado para tratar do processo retirado da suspensao.
             }
             contTemp++;
-            printf("Nao ha instrucoes sobrando de processos que voltaram a suspensao e nenhum processo saira da suspensao.\n");
         } else contTemp = 0;
+
+        printf("Nao ha instrucoes sobrando de processos que voltaram a suspensao e nenhum processo saira da suspensao.\n")
 
         flag = fgets(leitura,99,fp);
 
